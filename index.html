@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Sumit's Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <button id="darkModeToggle">🌙</button>
+    <section class="landing">
+        <div class="container landing-content">
+            <div class="intro-text">
+                <h1>Hello, I'm <span class="highlight">Sumit</span></h1>
+                <p id="typewriter-text"></p>
+            </div>
+            <div class="intro-photo">
+                <img src="photo.jpg" alt="Sumit's Photo">
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a passionate web developer, working toward becoming a full stack developer. My expertise is in building dynamic, responsive websites using cutting-edge technologies. I am also actively involved in open-source communities, contributing to various projects that help improve web standards.</p>
+            <p>Outside of coding, I love exploring new tech, sharing knowledge with others, and staying updated on industry trends. I'm always looking for new challenges that push my limits and help me grow.</p>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML Icon">
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS Icon">
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill-card">
+                    <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript Icon">
+                    <h3>JavaScript</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="newsiify2.png" alt="Project 1">
+                    <h3>personal news recommendation website</h3>
+                    <p>Built a responsive personal news recommendation website using modern web technologies.</p>
+                </div>
+                <div class="project-card">
+                    <img src="portfolio.png" alt="Project 2">
+                    <h3>perosnal Portfolio website</h3>
+                    <p>Built a responsive personal portfolio website using modern web technologies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+    <button id="backToTop">⬆️</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
