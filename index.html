@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sumit's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome CDN for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,19 +29,23 @@
             <div class="intro-text">
                 <h1>Hello, I'm <span class="highlight">Sumit</span></h1>
                 <p id="typewriter-text"></p>
+
             </div>
             <div class="intro-photo">
                 <img src="photo.jpg" alt="Sumit's Photo">
             </div>
         </div>
     </section>
+    
+    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <h2>About Me</h2>
-            <p>I am a passionate web developer, working toward becoming a full stack developer. My expertise is in building dynamic, responsive websites using cutting-edge technologies. I am also actively involved in open-source communities, contributing to various projects that help improve web standards.</p>
-            <p>Outside of coding, I love exploring new tech, sharing knowledge with others, and staying updated on industry trends. I'm always looking for new challenges that push my limits and help me grow.</p>
+            <p>I am a passionate web developer, working toward becoming a full stack developer, with expertise in building dynamic, responsive websites using the latest technologies. I'm enthusiastic about open source and excited to contribute to projects that enhance web standards in the near future.</p>
         </div>
     </section>
+
+    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <h2>Skills</h2>
@@ -59,23 +65,28 @@
             </div>
         </div>
     </section>
+    
+      
+      
+       
     <section id="projects" class="projects">
-        <div class="container">
             <h2>Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
                     <img src="newsiify2.png" alt="Project 1">
-                    <h3>personal news recommendation website</h3>
+                    <h3>Personal News Recommendation Website</h3>
                     <p>Built a responsive personal news recommendation website using modern web technologies.</p>
                 </div>
                 <div class="project-card">
                     <img src="portfolio.png" alt="Project 2">
-                    <h3>perosnal Portfolio website</h3>
+                    <h3>Personal Portfolio Website</h3>
                     <p>Built a responsive personal portfolio website using modern web technologies</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact Me</h2>
@@ -87,8 +98,43 @@
             </form>
         </div>
     </section>
-    <button id="backToTop">⬆️</button>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Sumit Prajapat. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/sumit-prajapat-865024287/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/sumitprajapat024" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://x.com/SumitPraja95359" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const typewriterText = document.getElementById("typewriter-text");
+            
+            const text = 
+                " A Developer in the making | Aspiring Full Stack Developer !\n" +
+                "Passionate about building seamless digital experiences...\n" +
+                " Enthusiastic about contributing to open-source projects \n" +
+               "learning from the tech community !";
+        
+            let index = 0;
+        
+            function type() {
+                if (index < text.length) {
+                    typewriterText.innerHTML += (text.charAt(index) === '\n') ? '<br>' : text.charAt(index);
+                    index++;
+                    setTimeout(type, 40); // Adjust typing speed
+                }
+            }
+            
+            type();
+        });
+        </script>
+        
+
 </body>
 </html>
+
