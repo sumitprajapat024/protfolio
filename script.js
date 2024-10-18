@@ -3,17 +3,17 @@ const toggleButton = document.getElementById('darkModeToggle');
 toggleButton.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 
-    
+
     if (document.body.classList.contains('dark-mode')) {
-        toggleButton.textContent = '☀️'; 
+        toggleButton.textContent = '☀️';
     } else {
-        toggleButton.textContent = '🌙'; 
+        toggleButton.textContent = '🌙';
     }
 });
 
 
 const backToTopButton = document.getElementById('backToTop');
-window.onscroll = function() {
+window.onscroll = function () {
     if (window.scrollY > 300) {
         backToTopButton.style.display = "block";
     } else {
@@ -25,19 +25,29 @@ backToTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const typewriterText = document.getElementById("typewriter-text");
+    const text = "I am a Full Stack Developer, open-source enthusiast, and problem solver!";
+    let index = 0;
 
-const typewriterText = document.getElementById("typewriter-text");
-const typewriterContent = "I am a Web Developer | Aspiring Full Stack Developer | Open Source Contributor";
-let i = 0;
+    function type() {
+        if (index < text.length) {
+            typewriterText.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(type, 100);  // Adjust speed
+        }
+    }
+    type();
+});
 
 function typeWriter() {
     if (i < typewriterContent.length) {
         typewriterText.innerHTML += typewriterContent.charAt(i);
         i++;
-        setTimeout(typeWriter, 100); 
+        setTimeout(typeWriter, 100);
     }
 }
 
-window.onload = function() {
+window.onload = function () {
     typeWriter();
 };
